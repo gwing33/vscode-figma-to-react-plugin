@@ -1,0 +1,64 @@
+{
+  "name": "vscode-figma-react-plugin",
+  "version": "0.0.1",
+  "displayName": "VS Code Figma to React Plugin",
+  "description": "VS Code Plugin to pull figma components in as React components",
+  "main": "./out/extension.js",
+  "author": "Gerald Leenerts",
+  "license": "ISC",
+  "enableProposedApi": true,
+  "engines": {
+    "vscode": "^1.25.0"
+  },
+  "activationEvents": [
+    "onView:figmaExplorer"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "figma-component-explorer",
+          "title": "Figma Explorer",
+          "icon": "media/figma-small.svg"
+        }
+      ]
+    },
+    "views": {
+      "figma-component-explorer": [
+        {
+          "id": "figmaExplorer",
+          "name": "Components"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "figmaExplorer.openFigmaComponent",
+        "title": "Open Figma Component"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "@types/mkdirp": "^0.5.2",
+    "@types/node": "*",
+    "@types/prettier": "^1.16.1",
+    "@types/rimraf": "^2.0.2",
+    "tslint": "^5.11.0",
+    "typescript": "^2.1.4",
+    "vscode": "^1.1.22"
+  },
+  "dependencies": {
+    "figma-js": "^1.6.1",
+    "jsonc-parser": "^0.4.2",
+    "mkdirp": "^0.5.1",
+    "prettier": "^1.16.4",
+    "rimraf": "^2.6.2",
+    "rxjs": "^6.4.0"
+  }
+}
