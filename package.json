@@ -1,5 +1,5 @@
 {
-  "name": "vscode-figma-react-plugin",
+  "name": "vscode-figma-to-react-plugin",
   "version": "0.0.1",
   "displayName": "VS Code Figma to React Plugin",
   "description": "VS Code Plugin to pull figma components in as React components",
